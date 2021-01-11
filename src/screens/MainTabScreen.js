@@ -23,14 +23,16 @@ const MainTabScreen = () => (
 
     <Tab.Navigator
       initialRouteName="Home"
-      activeColor="#e91e63"
-      style={{ backgroundColor: 'tomato' }}
+      activeColor="#fff"
+    
     >
       <Tab.Screen
         name="Home"
         component={HomeStackScreen}
         options={{
           tabBarLabel: 'Home',
+          tabBarColor: '#009387',
+
           tabBarIcon: ({ color }) => (
             <Icon name="home" color={color} size={26} />
           ),
@@ -41,6 +43,7 @@ const MainTabScreen = () => (
         component={DetailsStackScreen}
         options={{
           tabBarLabel: 'Updates',
+          tabBarColor: '#1f65ff',
           tabBarIcon: ({ color }) => (
             <Icon name="bell" color={color} size={26} />
           ),
@@ -51,6 +54,7 @@ const MainTabScreen = () => (
         component={ProfileScreen}
         options={{
           tabBarLabel: 'Profile',
+          tabBarColor: '#694fad',
           tabBarIcon: ({ color }) => (
             <Icon name="account" color={color} size={26} />
           ),
@@ -60,7 +64,8 @@ const MainTabScreen = () => (
         name="Explore"
         component={ExploreScreen}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Explore',
+          tabBarColor: '#d02860',
           tabBarIcon: ({ color }) => (
             <Icon name="account" color={color} size={26} />
           ),
@@ -105,7 +110,7 @@ const HomeStackScreen = ({navigation}) => (
       <DetailsStack.Navigator
               screenOptions={{
                 headerStyle: {
-                  backgroundColor: '#009387',
+                  backgroundColor: '#1f65ff',
                 },
                 headerTintColor: '#fff',
                 headerTitleStyle: {
@@ -119,7 +124,7 @@ const HomeStackScreen = ({navigation}) => (
                   headerLeft:() => (
                     <Icon.Button 
                       name="menu" size={25} 
-                      backgroundColor= "#009387" 
+                      backgroundColor= "#1f65ff" 
                       onPress={() =>navigation.openDrawer()}
                       >
                       </Icon.Button>
