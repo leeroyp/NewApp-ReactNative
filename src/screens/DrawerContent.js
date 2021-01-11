@@ -13,6 +13,7 @@ import {
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icons from 'react-native-vector-icons/AntDesign';
 
 export function DrawerContent(props) {
   return (
@@ -36,13 +37,56 @@ export function DrawerContent(props) {
 
             <View style={styles.row}>
                 <View style={styles.section}>
-                    <Paragraph>80</Paragraph>
+                    <Paragraph style={styles.paragraph, styles.caption}>80</Paragraph>
                     <Caption>Following</Caption>
                 </View>
-
+                <View style={styles.section}>
+                    <Paragraph style={styles.paragraph, styles.caption}>100</Paragraph>
+                    <Caption>Followers</Caption>
+                </View>
             </View>
           </View>
+          
+          <Drawer.Section style={styles.drawerSection}>
+          <DrawerItem
+          icon={({color, size}) => (
+            <Icon name="home-outline" color={color} size={size} />
+          )}
+          label="Home"
+          onPress={() => {}}
+        />
+           <DrawerItem
+          icon={({color, size}) => (
+            <Icon name="account-outline" color={color} size={size} />
+          )}
+          label="Profile"
+          onPress={() => {}}
+        />
+           <DrawerItem
+          icon={({color, size}) => (
+            <Icon name="bookmark-outline" color={color} size={size} />
+          )}
+          label="Bookmark"
+          onPress={() => {}}
+        />
+           <DrawerItem
+          icon={({color, size}) => (
+            <Icon name="account-settings-outline" color={color} size={size} />
+          )}
+          label="Settings"
+          onPress={() => {}}
+        />
+           <DrawerItem
+          icon={({color, size}) => (
+            <Icon name="account-check-outline" color={color} size={size} />
+          )}
+          label="Support"
+          onPress={() => {}}
+        />
+          </Drawer.Section>
         </View>
+
+
       </DrawerContentScrollView>
       <Drawer.Section style={styles.bottomDrawerSection}>
         <DrawerItem
