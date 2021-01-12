@@ -15,7 +15,15 @@ import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icons from 'react-native-vector-icons/AntDesign';
 
+
+
 export function DrawerContent(props) {
+    const [isDarkTheme, setIsDarkTheme] = React.useState(false)
+
+    const toggleTheme = () => {
+        setIsDarkTheme(!isDarkTheme);
+    }
+
   return (
     <View style={{flex: 1}}>
       <DrawerContentScrollView {...props}>
@@ -83,6 +91,18 @@ export function DrawerContent(props) {
           label="Support"
           onPress={() => {}}
         />
+          </Drawer.Section>
+
+          <Drawer.Section title= "Preferences">
+              <TouchableRipple onPress={() => {toggleTheme()}}>
+                  <View style={styles.preference}>
+                      <Text>Dark Theme</Text>
+                      <View pointerEvents='none'>
+                      <Switch value={isDarkTheme} />
+                      </View>
+                  </View>
+              </TouchableRipple>
+
           </Drawer.Section>
         </View>
 
