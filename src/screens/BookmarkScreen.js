@@ -3,7 +3,7 @@ import {View, Text, Button, StyleSheet} from 'react-native';
 
 const BookmarkScreen = () => { 
     return ( 
-        <View> 
+        <View style={styles.container}> 
             <Text>Book mark screen </Text>
         <Button 
         title= "Click here"

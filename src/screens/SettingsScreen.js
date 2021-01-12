@@ -3,7 +3,7 @@ import {View, Text, Button, StyleSheet} from 'react-native';
 
 const SettingsScreen = () => { 
     return ( 
-        <View> 
+        <View style={styles.container}> 
             <Text>Settings screen </Text>
         <Button 
         title= "Click here"

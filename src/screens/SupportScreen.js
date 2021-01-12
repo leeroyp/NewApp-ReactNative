@@ -3,7 +3,7 @@ import {View, Text, Button, StyleSheet} from 'react-native';
 
 const SupportScreen = () => { 
     return ( 
-        <View> 
+        <View  style={styles.container}> 
             <Text>Suport Screen </Text>
         <Button 
         title= "Click here"
